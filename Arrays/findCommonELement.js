@@ -17,7 +17,8 @@ function findCommonElem(arr, arr1, arr2) {
       }
     }
   }
-  let arrFiltered = arrNew.filter(
+  // its to remove the duplicate elemeents from the array
+  let arrFiltered = arrNew.filter(   
     (value, index) => arrNew.indexOf(value) === index
   );
   return arrNew.length === 0 ? "No common elements" : arrFiltered;

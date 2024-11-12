@@ -1,4 +1,5 @@
 // find the lost element in a duplicate array
+//distince characters
 let arr = [2, 4, 3, 7, 8, 9];
 let arr1 = [2, 4, 3, 8, 9];
 

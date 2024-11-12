@@ -11,3 +11,4 @@ function findFirstRepeat(arr) {
 
 let arr = [1, 2, 2, 3, 4];
 console.log(findFirstRepeat(arr));
+//for unsorted we can loop and find the count and the first one will be returned 

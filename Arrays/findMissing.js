@@ -1,4 +1,4 @@
-// find missing integers from an array
+// find missing integers from an array(numbers are consecutive)
 
 let arr = [1, 3, 4, 5, 7];
 

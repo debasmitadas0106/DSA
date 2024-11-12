@@ -37,6 +37,7 @@ function findMaxDupUnsorted(arr) {
     }
   }
   if (arr2.length === 0) return "no duplicates";
+  //finding the max duplicate out of this by comparison
   let num = arr2[0];
   for (let i = 1; i < arr2.length; i++) {
     if (arr2[i] > num) {
