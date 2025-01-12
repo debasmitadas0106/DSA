@@ -1,15 +1,21 @@
-// find the lost element in a duplicate array
-let arr = [2, 4, 3, 7, 8, 9];
-let arr1 = [2, 4, 3, 8, 9];
+// removing duplicates from an array without creating a new one
 
-function findMissingELem(arr, arr1) {
+let arr = [1, 1, 3, 2, 5, 5, 6];
+
+function removeDupElem(arr) {
   let arrNew = [];
   for (let i = 0; i < arr.length; i++) {
-    if (!arr1.includes(arr[i])) {
+    if (!arrNew.includes(arr[i])) {
       arrNew.push(arr[i]);
+    } else {
+      arr.splice(arr[i], 1);
     }
   }
-  return arrNew;
+  return arr;
 }
 
-console.log(findMissingELem(arr, arr1));
+console.log(removeDupElem(arr))
+
+// const input = "7289787-Vodex_1726745890824";
+// const encoded = Buffer.from(input).toString('base64');
+// console.log(encoded);
