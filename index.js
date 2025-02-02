@@ -1,39 +1,9 @@
-// let arr = [
-//   {
-//     name: "Debasmita",
-//     age: 25,
-//     profession: "Engineer",
-//   },
-//   {
-//     name: "Jennifer",
-//     age: 27,
-//     profession: "Analyst",
-//   },
-//   {
-//     name: "Amira",
-//     age: 23,
-//     profession: "Writer",
-//   },
-// ];
-
-// let result = arr.reduce(
-//   (acc, element) => {
-//     acc.name.push(element.name);
-//     acc.age.push(element.age);
-//     acc.profession.push(element.profession);
-//     return acc;
-//   },
-//   { name: [], age: [], profession: [] }
-// );
-
-// console.log(result);
-
 const axios = require("axios");
 const { wrapper } = require("axios-cookiejar-support");
 const { CookieJar } = require("tough-cookie");
 
 const sap = async () => {
-  let leadId = "00163E05AE661ED389F31EB9C59FD49C";
+  let leadId = "AD6CCF7B736F1EDFB793CDA8D548279C";
   const jar = new CookieJar(); // To store cookies
   const client = wrapper(axios.create({ jar })); // Axios instance with cookie support
 
@@ -60,7 +30,8 @@ const sap = async () => {
     // Step 2: PATCH Request with CSRF Token and Cookies
     const data = {
       UserStatusCode: "04",
-      ResultReasonCode: "005",
+      ResultReasonCode: "004",
+      Note:"callll"
     };
 
     const patchOptions = {
@@ -90,4 +61,3 @@ const sap = async () => {
 sap().then((result) => {
   console.log("Result:", result);
 });
-
