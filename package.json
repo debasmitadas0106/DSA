@@ -1,10 +1,15 @@
 {
   "dependencies": {
+    "@google-cloud/kms": "^4.5.0",
     "axios": "^1.7.9",
     "axios-cookiejar-support": "^5.0.5",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.2.0",
     "express": "^4.21.2",
+    "fs": "^0.0.1-security",
     "luxon": "^3.5.0",
     "redis": "^4.7.0",
-    "tough-cookie": "^5.1.0"
+    "tough-cookie": "^5.1.0",
+    "uuid": "^11.0.5"
   }
 }
