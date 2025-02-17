@@ -252,11 +252,91 @@ let stringifiedObj = objectofNames.map((item) => {
 //Map an array of strings to return a string made of their first and last characters.
 let arrOfNames = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
 
-let abbre = arr.map((item)=>{
-  let name = ""
-  name+=item[0]
-  name+=item[item.length-1]
-  return name
-})
+let abbre = arr.map((item) => {
+  let name = "";
+  name += item[0];
+  name += item[item.length - 1];
+  return name;
+});
 console.log(abbre);
 
+//Map an array to swap the key and its respective values
+let swappedArray = arr.map((item) => {
+  let swappedObj = {};
+  Object.keys(item).forEach((key) => {
+    swappedObj[item[key]] = key;
+  });
+  return swappedObj;
+});
+
+//Map an array of objects like { user: { id: 1, name: "Alice" } } to return just the names (["Alice"]).
+
+let arrd = [
+  { user: { id: 1, name: "Alice" } },
+  { user: { id: 2, name: "Bob" } },
+  { user: { id: 3, name: "Charlie" } },
+];
+
+let names = arr.map((item) => {
+  return item.user.name;
+});
+
+//Map an array of objects like { firstName: "Jane", lastName: "Doe" } to { fullName: "Jane Doe" }.
+
+let users = [
+  {
+    firstName: "Debasmita",
+    lastName: "Das",
+  },
+  {
+    firstName: "",
+    lastName: "Biswas",
+  },
+];
+
+let fullName = users.map((item) => {
+  return { fullName: item.firstName + " " + item.lastName };
+});
+
+console.log(fullName);
+
+//Ensure no extra spaces if a name is missing
+
+let fullNames = users.map((item) => ({
+  fullName: [item.firstName, item.lastName].filter(Boolean).join(" "),
+}));
+
+console.log(fullNames);
+
+//Map an array of objects like { name: "Sam", city: "NY" } to group people by the city.
+let people = [
+  { name: "Sam", city: "New York" },
+  { name: "Alex", city: "California" },
+  { name: "Jordan", city: "Texas" },
+  { name: "Emily", city: "California" },
+  { name: "Michael", city: "California" },
+  { name: "Sarah", city: "Florida" },
+  { name: "Daniel", city: "California" },
+  { name: "Sophia", city: "California" },
+  { name: "David", city: "California" },
+  { name: "Olivia", city: "Nevada" },
+];
+
+let peopleInCalifornia = people
+  .filter((item) => item.city === "California")
+  .map((item) => item.name);
+console.log(peopleInCalifornia);
+
+//Map an array of objects like { product: "Laptop", price: 1000 } to include a new property discountPrice, which is price * 0.9.
+
+let products = [
+  { product: "Laptop", price: 1000 },
+  { product: "Phone", price: 800 },
+  { product: "Tablet", price: 600 },
+];
+
+let addedFields = products.map((item) => {
+  item.discountPrice = 0.8;
+  return item;
+});
+console.log(addedFields);
