@@ -340,3 +340,18 @@ let addedFields = products.map((item) => {
   return item;
 });
 console.log(addedFields);
+
+//flatten an array into a single array
+
+let arrays = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+
+let arrs = [];
+arrays.map((item) =>
+  item.map((e) => {
+    return arr.push(e);
+  })
+);

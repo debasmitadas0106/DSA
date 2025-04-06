@@ -238,3 +238,25 @@ let eventUpcoming = events.filter((event) => {
 });
 
 console.log(eventUpcoming);
+
+let obj = [
+  {
+    name: "Debamsita",
+    role: "Software Developer",
+    roadlink: "musin",
+  },
+  {
+    name: "Parler",
+    role: "Software Developer",
+    roadlink: "musin",
+  },
+  {
+    name: "Parler",
+    role: "Software Developer",
+    roadlink: "rii",
+  },
+];
+let filteredResult = obj.filter(
+  (item, index, self) =>
+    index === self.findIndex((t) => t.roadlink === item.roadlink)
+);
