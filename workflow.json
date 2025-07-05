@@ -1,0 +1,63 @@
+{
+  "workflows": [
+    {
+      "name": "appointmentConfirmation",
+      "id": 1,
+      "timezone": "Asia/Kolkata",
+      "start": 2,
+
+      "data": [
+        {
+          "id": 2,
+          "action": "condition",
+          "value": 2,
+          "status": "valid",
+          "ifTrue": 4,
+          "ifFalse": 5
+        },
+        {
+          "id": 4,
+          "action": "call",
+          "value": {
+            "message": "This is a call for appointment confirmation"
+          },
+          "next": 6
+        },
+        {
+          "id": 5,
+          "action": "delay",
+          "startTime": 1000,
+          "endTime": 5000,
+          "message":"Im in delay",
+          "next": 4
+        },
+        {
+          "id": 6,
+          "action": "sendSms",
+          "value": {
+            "message": "This is an sms for appointment confirmation"
+          },
+          "next": 7
+        },
+        {
+          "id": 7,
+          "action": "sendEmail",
+          "message": "this is an email for appointment confirmation"
+        }
+      ]
+    },
+    {
+      "name": "appointmentFixing",
+      "id": "12",
+      "timezone": "Asia/Kolkata",
+      "start": "21",
+      "data": [
+        {
+          "id": "21",
+          "action": "condition",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}

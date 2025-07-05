@@ -1,0 +1,58 @@
+{
+  "workflows": [
+    {
+      "name": "surgeryConfirmation",
+      "workFlowId": "1",
+      "triggerPoint": "leadData",
+      "start": "12",
+      "data": [
+        {
+          "id": "12",
+          "action": "condition",
+          "fieldType": "date",
+          "field": "surgeryDate",
+          "conditionType": "equals",
+          "value": "surgeryDate",
+          "ifTrue": "14",
+          "ifFalse": "13"
+        },
+        {
+          "id": "13",
+          "action": "condition",
+          "fieldType": "value",
+          "field": "statusOfPatient",
+          "conditionType": "equals",
+          "value": "confirmed",
+          "ifTrue": "14",
+          "ifFalse": "124"
+        },
+        {
+          "id": "14",
+          "action": "condition",
+          "fieldType": "value",
+          "field": "preExisitingCondition",
+          "conditionType": "equals",
+          "value": "NA",
+          "ifTrue": "123",
+          "ifFalse": "125"
+        },
+        {
+          "id": "123",
+          "action": "call",
+          "projectId": "7639sdbf83wr6039bkdfjsbg"
+        },
+        {
+          "id": "124",
+          "action": "delay",
+          "startTime": 864000,
+          "projectId": "7639sdbf83wr6039bkdfjsbg"
+        },
+        {
+          "id": "125",
+          "action": "call",
+          "projectId": "93837yr84hrbfkjsbgdg"
+        }
+      ]
+    }
+  ]
+}
