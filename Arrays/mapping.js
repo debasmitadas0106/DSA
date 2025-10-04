@@ -17,7 +17,7 @@ let result2 = arr.map((element) => {
   return element ** 2;
 });
 
-// Map an array to return squares of each element
+// Map an array to return index and element of each element
 
 let result3 = arr.map((element, index) => {
   return element + index;
