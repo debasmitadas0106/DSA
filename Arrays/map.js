@@ -6,3 +6,5 @@ for (let i = 0; i < nums.length; i++) {
   console.log(`Step ${i}: Added ${nums[i]} -> ${i}`);
   console.log("Map now:", map);
 }
+let ff = map.get(3)
+console.log(ff)
