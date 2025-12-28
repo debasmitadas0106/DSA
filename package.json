@@ -10,6 +10,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
+    "googleapis": "^166.0.0",
     "luxon": "^3.5.0",
     "moment-timezone": "^0.6.0",
     "redis": "^4.7.0",

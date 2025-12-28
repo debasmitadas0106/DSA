@@ -139,3 +139,7 @@ let payload = {
     ],
   },
 };
+
+var SHA256 = require("crypto-js/sha256");
+let pass = JSON.stringify(SHA256("Ramya@1234"));
+console.log(pass);
